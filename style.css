@@ -156,6 +156,7 @@ main p {
   margin: 15px 20px 15px auto;
   padding: 12px 8px;
   max-width: 80%;
+  width: auto;
 }
 
 .message-block.reply {
@@ -195,7 +196,7 @@ main p {
 }
 
 .input-box textarea {
-  flex-grow: 1;
+  width: 70%;
   font-size: 16px;
   margin: 5px;
   padding: 3px 5px;
@@ -214,7 +215,8 @@ main p {
   color: white;
   font-size: 16px;
   border-radius: 2px;
-  height: 30px;
+  height: 45px;
+  width: 30%;
 }
 
 .bot-header {

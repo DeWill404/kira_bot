@@ -56,6 +56,10 @@ function closeChat() {
 }
 
 async function addMessage(message) {
+  if (message === "") return;
+
+  document.getElementById("chat").value = "";
+
   let div;
 
   div = document.createElement("div");
@@ -87,7 +91,6 @@ async function addMessage(message) {
     config
   );
 
-  document.getElementById("chat").value = "";
   if (!status) {
     div = document.createElement("div");
     div.className = `message-block reply`;

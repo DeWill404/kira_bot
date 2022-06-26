@@ -93,8 +93,12 @@
           name="chat"
           id="chat"
           cols="30"
-          rows="3"
+          rows="2"
           placeholder="Type Here"
+          onkeydown="
+            if (event.keyCode === 13)
+            addMessage(document.getElementById('chat').value)
+          "
         ></textarea>
         <button onclick="addMessage(document.getElementById('chat').value)">
           SEND
