@@ -55,21 +55,56 @@ function closeChat() {
   </svg>`;
 }
 
-function addMessage(message, reply) {
-  const div = document.createElement("div");
-  div.className = `message-block ${reply ? "reply" : ""}`;
-  div.tabIndex = "-1";
-  div.innerText = message;
-  div.setAttribute(
-    "data-date",
-    new Date().toLocaleString("en-us", {
-      day: "numeric",
-      month: "short",
-      hour: "numeric",
-      minute: "numeric",
-    })
-  );
+async function addMessage(message) {
+  // const res = await axios({
+  //   method: "POST",
+  //   url: "https://ineuron-hackathon.herokuapp.com/api/chat/",
+  //   data: { message: "Hi" },
+  //   headers: {
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Content-Type": "application/json",
+  //   },
+  // });
+  // console.log(res);
+  const res = await fetch("https://ineuron-hackathon.herokuapp.com/api/chat/", {
+    method: "POST",
+    body: JSON.stringify({ message: "Hi" }),
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+  });
 
-  document.querySelector(".bot-content").appendChild(div);
-  div.focus();
+  console.log("res", res);
+
+  // const config = {
+  //   headers: {
+  //     "Content-type": "application/json",
+  //   },
+  // };
+  // // async function postMessage() {
+  // const { reply } = await axios.post(
+  //   `https://ineuron-hackathon.herokuapp.com/api/chat/`,
+  //   { message: "hi" },
+  //   config
+  // );
+  // console.log(reply);
+  // }
+
+  // const div = document.createElement("div");
+  // div.className = `message-block ${reply ? "reply" : ""}`;
+  // div.tabIndex = "-1";
+  // div.innerText = message;
+  // div.setAttribute(
+  //   "data-date",
+  //   new Date().toLocaleString("en-us", {
+  //     day: "numeric",
+  //     month: "short",
+  //     hour: "numeric",
+  //     minute: "numeric",
+  //   })
+  // );
+
+  // document.querySelector(".bot-content").appendChild(div);
+  // div.focus();
 }
