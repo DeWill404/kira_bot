@@ -66,6 +66,7 @@ async function addMessage(message) {
   //   },
   // });
   // console.log(res);
+  console.log("C");
   const res = await fetch("https://ineuron-hackathon.herokuapp.com/api/chat/", {
     method: "POST",
     body: JSON.stringify({ message: "Hi" }),
