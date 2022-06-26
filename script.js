@@ -83,7 +83,7 @@ async function addMessage(message) {
   // async function postMessage() {
   const { data, status } = await axios.post(
     `https://ineuron-hackathon.herokuapp.com/api/chat/`,
-    { message: "hi" },
+    { message },
     config
   );
 

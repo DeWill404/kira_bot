@@ -165,7 +165,7 @@ main p {
   color: white;
 }
 
-.message-block::after {
+/* .message-block::after {
   content: attr(data-date);
   position: absolute;
   bottom: -8px;
@@ -181,7 +181,7 @@ main p {
   right: auto;
   left: 20px;
   background: linear-gradient(#ff8901 49%, white 51%);
-}
+} */
 
 .input-box {
   position: sticky;
