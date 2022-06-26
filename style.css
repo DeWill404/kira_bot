@@ -229,6 +229,7 @@ main p {
   border-top-left-radius: 5px;
   background: #ff8901;
   color: white;
+  z-index: 9999;
 }
 
 .bot-header h3 {
