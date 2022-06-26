@@ -55,7 +55,7 @@ function closeChat() {
   </svg>`;
 }
 
-async function addMessage(message) {
+async function addMessage(message, fff) {
   // const res = await axios({
   //   method: "POST",
   //   url: "https://ineuron-hackathon.herokuapp.com/api/chat/",
